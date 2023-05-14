@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+body {
+    width: 100vh;
+    font-family: 'Inter', sans-serif;
+    background-image: url(assets/bg-img2.jpg);
+    background-size: cover;
+    z-index: 1;
+}
+body video{
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: fixed;
+    object-fit: cover;
+}
+
+
+.nav {
+    position: absolute;
+    padding: 30px 80px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.nav .logo img{
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 100%;
+    z-index: 3;
+}
+.nav a {
+    color: white;
+    align-items: center;
+}
+
+.nav .links {
+    display: flex;
+    align-items: center;
+    background-color: rgba(246, 233, 216, 0.505);
+    margin: 30px;
+}
+.links.mobile-links{
+    display: none;
+}
+.nav .links a{
+    font-family: 'Bodoni Moda', serif;
+    font-size: clamp(1em, 3.5vh, 2.5em);
+    color: rgb(136, 115, 46);
+    text-transform: uppercase;
+    margin: 0 40px;
+    transition: all 0.5s;
+}
+.nav .links a:hover{
+    color: #575548ff;
+}
+
+.nav .nav-links{
+    display: flex;
+    align-items: center;
+    background-color: rgba(246, 233, 216, 0.605);
+    backdrop-filter: blur(5px);
+    width: 100%;
+    justify-content: end;
+    padding-right: 60px;
+    margin: 40px;
+    transition: all 1s linear;
+    z-index: 100;
+}
+.nav-links.mobile-menu{
+    display: none;
+}  
+.nav .nav-links ul {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.nav .nav-links ul li{
+    font-family: 'Bodoni Moda', serif;
+    text-transform: uppercase;
+    letter-spacing: -4px;
+    margin: 30px 0;
+    font-size: 5em;
+    transition: all 0.5s;
+}
+.nav .nav-links ul li:hover{
+    transform: translate(-10%);
+
+}
+.nav .nav-links ul li a{
+    color: #575548ff;
+    transition: all 0.5s;
+}
+.nav .nav-links ul li:hover a{
+    color: rgb(136, 115, 46);
+}
+
+.nav .nav-links ul li:active a{
+    color: rgb(201, 189, 110);
+    font-weight: bold;
+}
+.nav .nav-droite{
+    display: flex;
+    align-items: start;
+    padding: 10px;
+}
+.nav .visit{
+    color: #575548ff;
+}
+
+.nav .menu-burger {
+    padding-left: 30px;
+    display: flex;
+    padding-top: 4px;
+    cursor: pointer;
+    color: #575548ff;
+    transition: all 0.4s;
+}
+.nav .menu-burger:hover {
+    color: rgb(136, 115, 46);
+    transform: scale(1.15);
+}
+.nav p{
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+main {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+}
+
+
+
+
+
+/*           PROFIL           */
+.profil {
+    display: flex;
+    flex-direction: column;
+    padding: 14% 80px 0;
+    font-family: 'Bodoni Moda', serif;
+}
+.profil .left{
+    font-size: 10em;
+}
+.profil .left p.prenom{
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgb(165, 140, 57);
+    letter-spacing: -18px;
+}
+.profil .left p.nom{
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgb(165, 140, 57);
+    letter-spacing: -5px;
+    margin-top: -80px
+}
+.profil .right {
+    font-family: 'Bodoni Moda', serif;
+    margin: 0.5% 0;
+    max-width: 68%;
+    background-color: rgba(246, 233, 216, 0.505);
+    padding: 20px;
+    /* border: 1px solid rgb(136, 115, 46); */
+}
+.profil .right p{
+    font-size: 1.3em;
+    font-weight: 500;
+    color: #575548ff;
+}
+
+
+
+
+/*           COMPETENCES               */
+.competences {
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 15%;
+}
+.competences .card {
+    backdrop-filter: blur(3px);
+    border: 1px solid rgb(136, 115, 46);
+    font-size: 20px;
+    margin: 20px;
+    padding: 3% 8%;
+    transition: all 0.3s;
+}
+.competences .card:hover {
+    background-color: #ffffff78;
+
+    transform: scale(1.4);
+}
+.competences .hardskills {
+    margin-top: -10%;
+    width: 240px;
+    height: 480px;
+}
+.competences .softskills {
+    width: 240px;
+    height: 400px;
+}
+.competences .softskills ul{
+    padding-top: 40px;
+}
+
+.competences h2 {
+    font-family: 'Bodoni Moda', serif;
+    color: rgb(136, 115, 46);
+    text-align: center;
+    text-transform: uppercase;
+
+}
+.competences ul li{
+    color: #575548ff;
+    letter-spacing: -1px;
+    font-size: 1em;
+}
+.competences ul li span{
+    font-family: 'Bodoni Moda', serif;
+    font-weight: bold;
+    font-size: 1.4em;
+    text-transform: uppercase;
+}
+
+.competences .card-top {
+    display: flex;
+    padding-top: 40px;
+}
+.competences .card-bot {
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
+    padding-bottom: 40px;
+}
+
+
+
+
+/*                 Formations             */
+.formations {
+    display: none;
+    justify-content: center;
+    align-items: start;
+    padding: 0 10%;
+    padding-top: 18%;
+    transition: all 0.3s;
+}
+.formations .card-formations{
+    width: 30%;
+    margin: 20px;
+    background-color: #ffffff78;
+    border: 1px solid rgb(136, 115, 46);
+    backdrop-filter: blur(3px);
+    transition: all 0.3s;
+}
+.formations p{
+    font-family: 'Bodoni Moda', serif;
+    color: rgb(42, 41, 35);
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: 600;
+    font-style: italic;
+    margin: 20px;}
+.formations .titre {
+    font-family: 'Bodoni Moda', serif;
+    text-transform: uppercase;
+    color: rgb(136, 115, 46);
+    font-size: 22px;
+    text-align: center;
+    letter-spacing: -1px;
+    padding: 10px 10px;
+}
+.btn-info-card1,
+.btn-info-card2,
+.btn-info-card3,
+.btn-info-card4{
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.btn-info-card1:hover,
+.btn-info-card2:hover,
+.btn-info-card3:hover,
+.btn-info-card4:hover{
+    background-color: rgba(246, 233, 216, 0.505);
+    letter-spacing: 1px;
+    color: rgb(136, 115, 46);
+}
+.info-card1,
+.info-card2,
+.info-card3,
+.info-card4{
+    display: none;
+}
+
+.formations ul {
+    font-size: 10px;
+    color: #575548ff;
+    padding: 20px;
+    font-size: 1em;
+}
+.formations ul li{
+    margin: 10px 0;
+    letter-spacing: -1px;
+}
+.formations ul li span{
+    font-family: 'Bodoni Moda', serif;
+    font-weight: bold;
+    font-size: 1.4em;
+}
+.formations .card-formations:hover{
+    border: 1px solid rgb(136, 115, 46);
+    backdrop-filter: blur(3px);
+}
+
+
