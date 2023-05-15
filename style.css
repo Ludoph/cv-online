@@ -20,6 +20,12 @@ body video {
     position: fixed;
     object-fit: cover;
 }
+
+
+
+/*-------------------------------------------------------------------------------------------- */
+/*----------------------             DEBUT DE SECTION NAV            ------------------------- */
+/*-------------------------------------------------------------------------------------------- */
 .nav {
     position: absolute;
     padding: 30px 80px;
@@ -42,7 +48,7 @@ body video {
     }
 
     50% {
-        transform: scale(1.04);
+        transform: scale(1.06);
     }
 
     100% {
@@ -58,9 +64,9 @@ body video {
     flex-direction: column;
     align-items: start;
     background-color: rgba(246, 233, 216, 0.505);
-    z-index: 99;
     margin-top: 30px;
     animation: fadeIn 0.4s;
+    z-index: 9900;
 }
 .links.mobile-links {
     display: none;
@@ -68,7 +74,7 @@ body video {
 .nav .links a {
     font-family: 'Bodoni Moda', serif;
     font-size: clamp(1em, 3.5vh, 2.5em);
-    color: rgb(136, 115, 46);
+    color: #575548ff;
     text-transform: uppercase;
     margin: 0 40px;
     transition: all 0.5s;
@@ -133,7 +139,6 @@ body video {
 .nav .nav-droite {
     display: flex;
     align-items: start;
-    padding: 10px;
 }
 .nav .visit {
     color: #575548ff;
@@ -217,13 +222,15 @@ body video {
     }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 420px) {
     body {
         width: 100vw;
     }
     .nav {
         position: none;
-        padding: 30px 20px;
+        padding: 30px 0px;
+        justify-content: space-evenly;
+        width: 100vw;
     }
     .nav .logo img {
         width: 100px;
@@ -233,7 +240,7 @@ body video {
         margin: 0;
         background-color: rgba(246, 233, 216, 0.605);
         padding-left: 70px;
-        transform: translateX(-50px);
+        transform: translateX(-80px);
     }
     .nav .links a {
         font-size: 2em;
@@ -249,13 +256,14 @@ body video {
         font-size: 2em;
     }
     .nav .nav-links{
-        padding-right: 10px;
+        padding-right: 0;
         align-items: flex-start;
         height: 380px;
+        width: 160px;
         
     }
-    .nav .nav-links a{
-        font-size: 0.3em;
+    .nav .nav-links ul li a{
+        font-size: 12px;
         letter-spacing: 0;
     }
 }
@@ -271,9 +279,12 @@ main {
 }
 
 
-/*           PROFIL           */
+/*-------------------------------------------------------------------------------------------- */
+/*----------------------           DEBUT DE SECTION PROFIL           ------------------------- */
+/*-------------------------------------------------------------------------------------------- */
 .profil {
-    display: flex;
+    display: none;
+    width: 100vw;
     flex-direction: column;
     padding: 14% 80px 0;
     font-family: 'Bodoni Moda', serif;
@@ -372,6 +383,8 @@ main {
 @media (max-width: 576px) {
     .profil {
         padding-top: 40%;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .profil .left {
@@ -387,14 +400,29 @@ main {
     .profil .right {
         margin: 10% 0;
         max-width: 50%;
+    }
+}
+@media (max-width: 420px) {
+    .profil {
+    }
 
+    .profil .left {
+        font-size: 55px;
+        text-align: center;
+    }
+
+   
+
+    .profil .right {
     }
 }
 
 
 
 
-/*           COMPETENCES               */
+/*-------------------------------------------------------------------------------------------- */
+/*------------------------------ DEBUT DE SECTION COMPETENCES -------------------------------- */
+/*-------------------------------------------------------------------------------------------- */
 .competences {
     display: none;
     flex-direction: row;
@@ -412,7 +440,7 @@ main {
     transition: all 0.3s;
 }
 
-.competences .card:hover {border: 1px solid rgb(136, 115, 46);
+.competences .card:hover {
     border: 1px solid rgb(136, 115, 46);
     transform: scale(1.4);
 }
@@ -480,7 +508,6 @@ main {
 }
 @media (max-width: 576px) {
     .competences{
-
         flex-direction: column;
     }
     .competences .card {
@@ -493,6 +520,22 @@ main {
     }
     .competences .softskills {
         width: 270px;
+    }
+}
+@media (max-width: 420px) {
+    .competences{
+        flex-direction: column;
+    }
+    .competences .card {
+        margin: 40px 10px;
+        padding: 3% 5%;
+    }
+    .competences .hardskills {
+        width: 200px;
+        margin-top: 400px;
+    }
+    .competences .softskills {
+        width: 200px;
     }
 }
 
@@ -616,7 +659,7 @@ main {
         margin-top: 500px;
     }
 }
-@media (max-width: 390px){
+@media (max-width: 420px){
     .formations{
 
     }
@@ -624,4 +667,21 @@ main {
         font-size: 18px;
         
     }
+}
+
+/*-------------------------------------------------------------------------------------------- */
+/*---------------------------------- DEBUT DE SECTION PROJETS--------------------------------- */
+/*-------------------------------------------------------------------------------------------- */
+.projets {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 200px;
+}
+.projets .card-projets{
+    background-color: rgba(246, 233, 216, 0.505);
+    width: 400px;
+    height: 300px;
+    text-align: center;
+    margin: 50px;
 }
