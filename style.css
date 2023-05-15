@@ -59,6 +59,10 @@ body video {
     color: white;
     align-items: center;
 }
+
+.links{
+    position: absolute;
+}
 .nav .links {
     display: flex;
     flex-direction: column;
@@ -66,7 +70,7 @@ body video {
     background-color: rgba(246, 233, 216, 0.505);
     margin-top: 30px;
     animation: fadeIn 0.4s;
-    z-index: 9900;
+    z-index: 500;
 }
 .links.mobile-links {
     display: none;
@@ -283,7 +287,7 @@ main {
 /*----------------------           DEBUT DE SECTION PROFIL           ------------------------- */
 /*-------------------------------------------------------------------------------------------- */
 .profil {
-    display: none;
+    display: flex;
     width: 100vw;
     flex-direction: column;
     padding: 14% 80px 0;
@@ -673,15 +677,73 @@ main {
 /*---------------------------------- DEBUT DE SECTION PROJETS--------------------------------- */
 /*-------------------------------------------------------------------------------------------- */
 .projets {
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 200px;
 }
 .projets .card-projets{
     background-color: rgba(246, 233, 216, 0.505);
+    border: 1px solid rgb(136, 115, 46);
+    backdrop-filter: blur(3px);
     width: 400px;
     height: 300px;
     text-align: center;
-    margin: 50px;
+    margin: 40px;
 }
+.projets .prjt1{
+    background-image: url(assets/projet1.png);
+    background-size: cover;
+    opacity: 0.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.projets .prjt2{
+    background-image: url(assets/projet2.png);
+    background-size: cover;
+    opacity: 0.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.projets .prjt3{
+    background-image: url(assets/projet3.png);
+    background-size: cover;
+    opacity: 0.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.projets .prjt4{
+    background-image: url(assets/projet4.png);
+    background-size: cover;
+    opacity: 0.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.projets .prjt5{
+    background-image: url(assets/projet5.png);
+    background-size: cover;
+    opacity: 0.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.projets .prjt6{
+    background-image: url(assets/projet6.png);
+    background-size: cover;
+    opacity: 0.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.projets .card-projets p{
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 2px 3px black;
+}
+
