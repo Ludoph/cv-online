@@ -1,43 +1,50 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    
-    <title>CV v2</title>
+
+    <title>Portfolio</title>
 </head>
+
 <body>
     <!-- <video src="assets/bg-img2.mp4" autoplay muted loop></video> -->
     <nav class="nav">
-        <a href="#" class="logo">
+        <div class="logo">
             <img class="btn-logo" src="assets/photoprofil3.jpg" alt="">
-        </a>
-        <div id="links" class="links mobile-links">
-            <a href="assets/CV.pdf" target="_blank"><i class="fa-solid fa-file"></i> CV</a>
-            <a href="https://www.linkedin.com/in/092155113/" target="_blank"><i class="fa-brands fa-linkedin"></i> Linkedin</a>
-            <a href="https://github.com/Ludoph" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
-            <a href="mailto:phounphonh.ludovic@gmail.com"><i class="fa-solid fa-envelope"></i> Mail</a>
-          </div>
+            <div id="links" class="links mobile-links">
+                <a href="assets/CV.pdf" target="_blank"><i class="fa-solid fa-file"></i><span> CV</span></a>
+                <a href="https://www.linkedin.com/in/092155113/" target="_blank"><i
+                        class="fa-brands fa-linkedin"></i><span> Linkedin</span></a>
+                <a href="https://github.com/Ludoph" target="_blank"><i class="fa-brands fa-github"></i><span>
+                        GitHub</span></a>
+                <a href="mailto:phounphonh.ludovic@gmail.com"><i class="fa-solid fa-envelope"></i><span> Mail</span></a>
+            </div>
+        </div>
         <div id="nav-links" class="nav-links mobile-menu">
             <ul>
-                <li><a href="#" onclick="showProfil()">Home</a></li>
+                <li><a href="#" onclick="showProfil()">Accueil</a></li>
                 <li><a href="#" onclick="showCompetences()">Compétences</a></li>
                 <li><a href="#" onclick="showFormations()">Formations</a></li>
                 <li><a href="#" onclick="showProjets()">Projets</a></li>
             </ul>
         </div>
         <div class="nav-droite">
-            <p id="visit" class="visit visit-hidden" ><i class="fa-regular fa-eye"></i> 0</p>
-            <p class="menu-burger"><i class="fa-solid fa-bars"></i></p>
+            <p id="visit" class="visit visit-hidden"><i class="fa-regular fa-eye"></i> <span id="visit-count"> 0</span>
+            </p>
+            <p class="menu-burger"><i class="fa-solid fa-bars" id="menu-burger"></i></p>
         </div>
     </nav>
     <main>
         <div id="profil" class="profil">
             <div class="right">
-                <p>Je suis à la recherche d'une alternance en tant que développeur web passionné, possédant des compétences en programmation, développement web et mobile. Je suis orienté résultats et j'ai de bonnes qualités relationnelles. Je suis une personne proactive, impliquée et très adaptable.</p>
+                <p>Je suis à la recherche d'une alternance en tant que développeur web passionné, possédant des
+                    compétences en programmation, développement web et mobile. Je suis orienté résultats et j'ai de
+                    bonnes qualités relationnelles. Je suis une personne proactive, impliquée et très adaptable.</p>
             </div>
             <div class="left">
                 <p class="prenom">Ludovic</p>
@@ -83,12 +90,15 @@
                 <p class="btn-info-card1">Plus d'infos</p>
                 <div class="info-card1">
                     <ul>
-                        <li><span>C</span>oncevoir et développer des composants d'interface utilisateur en intégrant les recommandations de sécurité</li>
-                        <li><span>C</span>oncevoir et développer la persistance des données en intégrant les recommandations de sécurité</li>
-                        <li><span>C</span>oncevoir et développer une application multicouche répartie en intégrant les recommandations de sécurité</li>
+                        <li><span>C</span>oncevoir et développer des composants d'interface utilisateur en intégrant les
+                            recommandations de sécurité</li>
+                        <li><span>C</span>oncevoir et développer la persistance des données en intégrant les
+                            recommandations de sécurité</li>
+                        <li><span>C</span>oncevoir et développer une application multicouche répartie en intégrant les
+                            recommandations de sécurité</li>
                     </ul>
                 </div>
-                
+
             </div>
             <div class="card-formations">
                 <p>En cours</p>
@@ -96,12 +106,14 @@
                 <p class="btn-info-card2">Plus d'infos</p>
                 <div class="info-card2">
                     <ul>
-                        <li><span>D</span>évelopper la partie front-end d’une application web en intégrant les recommandations</li>
+                        <li><span>D</span>évelopper la partie front-end d’une application web en intégrant les
+                            recommandations</li>
                         <li><span>C</span>réer des points d’accès aux donnés</li>
                         <li><span>M</span>aquetter une application</li>
                         <li><span>R</span>éaliser une interface utilisateur web statique et adaptable</li>
                         <li><span>C</span>réer une base de données dans un environnement headless CMS</li>
-                        <li><span>D</span>évelopper les composants d’accès aux données dans un environnement headless CMS</li>
+                        <li><span>D</span>évelopper les composants d’accès aux données dans un environnement headless
+                            CMS</li>
                     </ul>
 
                 </div>
@@ -134,7 +146,8 @@
             </div>
         </div>
     </main>
-    
+
     <script src="app.js"></script>
 </body>
+
 </html>
