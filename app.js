@@ -7,22 +7,29 @@ menuBurger.addEventListener('click',()=>{
     //afficher cacher le compteur de vues quand le nav link est affiché ou cahcé
     if(visit.style.display == "none") {
         visit.style.display = 'block';
+
     } else {
         visit.style.display = 'none';
     }
+    if(document.getElementById('menu-burger')){}
 });
 navLinks.addEventListener('click', () => {
     navLinks.classList.toggle('mobile-menu');
+    if(visit.style.display == "block") {
+        visit.style.display = 'none';
+    } else {
+        visit.style.display = 'block';
+    }
 });
 
 // Afficher / Masquer les réseaux
 const menuLinks = document.querySelector('.btn-logo');
 const showLinks = document.querySelector('.links');
 
-menuLinks.addEventListener('mouseover', () =>{
+menuLinks.addEventListener('click', () =>{
     showLinks.classList.toggle('mobile-links');
 });
-showLinks.addEventListener('mouseout', () =>{
+showLinks.addEventListener('click', () =>{
     showLinks.classList.toggle('mobile-links');
 });
 
@@ -65,56 +72,6 @@ btnInfoCard4.addEventListener('click', () =>{
     }
 });
 
-
-
-
-
-// Cacher le contenu des card formation avec un addEventListener mouse hover in/out  et classList
-
-//addEventListener : mouseover click mouseout mousemove
-
-
-
-
-
-
-// //déclaration de la variable qui va stocker l'id compteur
-// function incrementeCompteur(){
-//     //code de la fonction du compteur 
-//     // alert('Nouveau Visiteur !');
-//     localStorage.setItem('prenom', '💩') //met en place dans le local storage
-    
-// }
-// function affichePrenom(){
-//     let getPrenom = localStorage.getItem('prenom'); //recupere la valeur
-//     let spanPrenom = document.querySelector('#prenom'); //selectionne la valeur
-//     spanPrenom.textContent = getPrenom; //remplace le contenu par la valeur
-// }
-
-// let compteur = document.querySelector('#compteur'); //selection le bouton avec l'id compteur
-// compteur.addEventListener("click", incrementeCompteur); //met en place le gestionnaire d'evenement
-
-// let buttonAffiche = document.querySelector("#affiche"); //selectionne le boutton affiche
-// buttonAffiche.addEventListener("click", affichePrenom); //ajoute un gestionnaire d'evenement
-
-
-// function afficheCompteur(){
-//     let recup = localStorage.getItem('compteur');
-//     let nbClick = document.querySelector('#nbClick');
-//     if(recup != null){
-//         recup ++;
-//         localStorage.setItem('compteur', recup);
-//         nbClick.textContent = recup;
-//     } else {
-//         localStorage.setItem('compteur', 1);
-//         nbClick.textContent = 1;
-//     }
-// }
-// compteur.addEventListener('click', afficheCompteur);
-
-
-
-
 //Afichier cacher les sections
 function showProfil(){
     document.getElementById('profil').style.display = "flex";
@@ -141,3 +98,16 @@ function showProjets(){
     document.getElementById('projets').style.display = "flex"
 }
 
+
+
+const visitCounter = localStorage.getItem('visitCounter') || 0;
+const visitCountElement = document.getElementById('visit-count');
+visitCountElement.textContent = visitCounter;
+
+function incrementVisitCounter() {
+  const newVisitCounter = parseInt(visitCounter) + 1;
+  localStorage.setItem('visitCounter', newVisitCounter);
+  visitCountElement.textContent = newVisitCounter;
+}
+
+window.onload = incrementVisitCounter;
