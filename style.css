@@ -58,6 +58,7 @@ body video {
     flex-direction: column;
     align-items: start;
     background-color: rgba(246, 233, 216, 0.505);
+    z-index: 99;
     margin-top: 30px;
     animation: fadeIn 0.4s;
 }
@@ -198,6 +199,23 @@ body video {
         font-size: 0.5em;
     }
 }
+@media (max-width: 576px) {
+    .nav .nav-links {
+        padding-right: 0;
+        justify-content: center;
+        align-items: flex-start;
+        height: 380px;
+    }
+    .nav .nav-links ul {
+       align-items: center;
+    }
+    .nav .nav-links ul li{
+        margin: 10px 0;
+    }
+    .nav .nav-links ul li a{
+        font-size: 0.5em;
+    }
+}
 
 @media (max-width: 390px) {
     body {
@@ -233,7 +251,7 @@ body video {
     .nav .nav-links{
         padding-right: 10px;
         align-items: flex-start;
-        height: 60vh;
+        height: 380px;
         
     }
     .nav .nav-links a{
@@ -600,7 +618,7 @@ main {
 }
 @media (max-width: 390px){
     .formations{
-        
+
     }
     .formations .titre{
         font-size: 18px;
